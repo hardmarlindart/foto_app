@@ -1,0 +1,179 @@
+<%= form_for(@pessoa) do |f| %>
+  <% if @pessoa.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@pessoa.errors.count, "error") %> prohibited this pessoa from being saved:</h2>
+
+      <ul>
+      <% @pessoa.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+<div class="col-lg-12 col-sm-12 hero-feature">
+    <div class="table-responsive">
+      <table class="table table-bordered tbl-checkout">
+          <tbody>
+              <tr>
+                <td>Nome Completo</td>
+                  <td>
+                      <%= f.text_field :nome_completo , :class=> "form-control" %>  
+              </td>
+              <td>Alcunha</td>
+              <td>
+                   <%= f.text_field :alcunha , :class=> "form-control" %>
+              </td>
+          </tr>
+          <tr>
+              <td>Pai</td>
+              <td>
+                  <%= f.text_field :nome_pai , :class=> "form-control" %>
+              </td>
+              <td>Mãe</td>
+              <td>
+                  <%= f.text_field :nome_mae , :class=> "form-control" %>
+              </td>
+          </tr>
+          <tr>
+          <td>Data de Nacimento</td>
+            <td>
+              <%= f.date_field :data_nascimento ,  :class=> "form-control" %>  
+            </td>
+            </tr>
+          <tr>
+              <td>Último Endereço</td>
+              <td colspan="3">
+                  <%= f.text_area :endereco ,  :class=> "form-control" %>
+              </td>
+          </tr>
+
+           <tr>
+              <td>Cidade</td>
+              <td>
+                  <%= f.text_field :cidade ,  :class=> "form-control" %>
+              </td>
+              <td>Zona</td>
+              <td>
+                  <%= f.text_field :zona ,  :class=> "form-control" %>
+              </td>
+          </tr>
+
+          <tr>
+            <td>Estado</td>
+            <td>
+              <%= f.text_field :estado ,  :class=> "form-control" %>
+            </td> 
+            <td class="tujuan">País</td>
+              <td>
+                <%= f.text_field :pais ,  :class=> "form-control" %>
+              </td>  
+          <tr>
+            <td>Observação:</td>
+              <td colspan="3">
+                <%= f.text_area :observacao_1 ,  :class=> "form-control" %>
+              </td>
+          </tr>
+
+          <tr>
+              <td>Upload de Fotos:</td>
+              <td colspan="3">
+                <%= f.attachment_field  :imagems_files , multiple: true, presigned: true, diret: :true %>
+              </td>
+
+              <tr>
+            <td>Descrição Tatuagens:</td>
+              <td colspan="3">
+                <%= f.text_area :tatuagem_descricao ,  :class=> "form-control" %>
+              </td>
+
+          </tr>
+          </tr>
+      </tbody>
+    </table>
+</div>
+
+
+<div class="table-responsive">
+      <table class="table table-bordered tbl-checkout">
+          <tbody>
+              <tr>
+                <td>Identidade</td>
+                  <td>
+                      <%= f.text_field :identidade , :class=> "form-control" %>  
+              </td>
+              <td>CPF</td>
+              <td>
+                   <%= f.text_field :cpf , :class=> "form-control" %>
+              </td>
+          </tr>
+          <tr>
+              <td>Pratica Criminal</td>
+              <td>
+                  <%= f.text_area :pratica_criminal , :class=> "form-control" %>
+              </td>
+              <td>Mandado de Prisão nº </td>
+              <td>
+                  <%= f.text_field :mandado_prisao , :class=> "form-control" %>
+              </td>
+          </tr>
+          <tr>
+          <td>Condenação</td>
+            <td>
+              <%= f.text_field :condenacao ,  :class=> "form-control" %>  
+            </td>
+          </tr>
+          
+           <tr>
+            <td>Sexo</td>
+            <td>
+              <%= f.text_field :sexo ,  :class=> "form-control" %>  
+            </td>
+          </tr>
+
+           <tr>
+              <td>Altura</td>
+              <td>
+                  <%= f.text_field :altura ,  :class=> "form-control" %>
+              </td>
+              <td>Cor dos olhos</td>
+              <td>
+                  <%= f.text_field :cor_do_olho ,  :class=> "form-control" %>
+              </td>
+          </tr>
+
+          <tr>
+            <td>Cor do cabelo</td>
+            <td>
+              <%= f.text_field :cor_cabelo ,  :class=> "form-control" %>
+            </td> 
+            <td class="tujuan">Compleição Física</td>
+              <td>
+                <%= f.text_field :comp_fisica ,  :class=> "form-control" %>
+              </td>  
+          <tr>
+            <td>Marcas e Sinais:</td>
+              <td colspan="3">
+                <%= f.text_area :marca_sinal ,  :class=> "form-control" %>
+              </td>
+          </tr>
+
+          <tr>
+            <td>Comparsas:</td>
+              <td colspan="3">
+                <%= f.text_area :comparsa ,  :class=> "form-control" %>
+              </td>
+          </tr>  
+
+      </tbody>
+    </table>
+</div>
+
+
+            
+          <div class="btn-group btns-cart">
+              <%= f.submit "Continue", :class=> "btn btn-primary" %> 
+          </div>
+          <p> <%= link_to 'Voltar', pessoas_path %> </p>
+</div>
+  
+<% end %>

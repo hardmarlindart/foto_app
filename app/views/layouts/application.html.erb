@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    </head>
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"> -->
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  	<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  	<%= csrf_meta_tags %>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Foto">
+    <meta name="Mardem Lincow" content="foto">
+    <title>Agnesco</title>
+</head>
+<body>
+	<header>
+	    <div class="container">
+	        <div class="row">
+	        	<!-- Logo -->
+	            <div class="col-lg-4 col-md-3 hidden-sm hidden-xs">
+	            	<div class="well logo">
+	            		<a href="index.html">
+	            			Agnesco <span>Alpha</span>
+	            		</a>
+	            		<div>Sistema de Fotografias.</div>
+	            	</div>
+	            </div>
+	            <!-- End Logo -->
+
+				<!-- Search Form -->
+	            <%= render "busca" %>
+	            <!-- End Search Form -->
+
+	            <!--  List -->
+	            
+	            <!--  List -->
+	        </div>
+	    </div>
+    </header>
+	<!-- Navigation -->
+    <%= render "menu" %>
+    <!-- End Navigation -->
+    <div class="container main-container">
+        <div class="row">
+
+			<!-- Selection, visible only on large desktop -->
+            <div class="col-lg-3 visible-lg">
+                <div class="row text-center">
+                    
+                </div>
+            </div>
+            <!-- End Product Selection -->
+        </div>
+
+        <div class="row">
+        	<div class="col-lg-3 col-md-3 col-sm-12">
+
+        	</div>
+
+        	<div class="clearfix visible-sm"></div>
+
+			
+        	
+        	<div class="clearfix visible-sm"></div>
+				<%= yield %>
+        </div>
+
+	</div>
+	<!-- rodape -->
+	<%= render "rodape" %>
+	<!-- fim rodape -->
+	
+    <a href="#top" class="back-top text-center" onclick="$('body,html').animate({scrollTop:0},500); return false">
+    	<i class="fa fa-angle-double-up"></i>
+    </a>
+
+</body>
+</html>
