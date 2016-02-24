@@ -8,22 +8,23 @@
     <% end %>    
       
   </div>
-    <% @pessoas.each do |pessoa| %>
+    <%  @pessoas.each do |pessoa| %>
         <div class="col-lg-4 col-sm-4 hero-feature text-center">
           <div class="thumbnail">
               <a href="detail.html" class="link-p">
                 <%= attachment_image_tag(pessoa.imagems.first, :file, :fill, 580, 640, format: "jpg") %>
+
               </a>
             <div class="caption prod-caption">
               <h4> <%= link_to pessoa.nome_completo , pessoa %>  </a></h4>
-              <h4> <%= link_to pessoa.alcunha , pessoa %>  </a></h4>
+              <h4> <%= link_to  pessoa.alcunha , pessoa %>  </a></h4>
                   <p> <%= link_to 'Destroy', pessoa, method: :delete, data: { confirm: 'Deseja Continuas?' } %></p>
             </div>
           </div>
       </div>        
    <% end %>               
 </div>
-   
+<%= render "paginador" %>
 
 
 

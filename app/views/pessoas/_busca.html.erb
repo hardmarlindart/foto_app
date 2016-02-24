@@ -1,12 +1,10 @@
 <div class="col-lg-5 col-md-5 col-sm-7 col-xs-12">
 	<div class="well">
-		<form action="">
-			<div class="input-group">
-				<input type="text" class="form-control input-search" placeholder="Buscar"/>
-					<span class="input-group-btn">
-						<button class="btn btn-default no-border-left" type="submit"><i class="fa fa-search"></i></button>
-					</span>
-			</div>
-		</form>
+		 <%= form_tag pessoas_path, :method => 'get', class: 'input-group'  do %>
+		    <%= text_field_tag :search, params[:search], class: 'form-control', placeholder: 'Buscar...' %>
+		    <span class="input-group-btn">
+		      <%= submit_tag "Buscar", class: "btn btn-default" %>
+		    </span>
+  		<% end %>
 	</div>
 </div>

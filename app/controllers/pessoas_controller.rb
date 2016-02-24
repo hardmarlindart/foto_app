@@ -4,7 +4,12 @@ class PessoasController < ApplicationController
   # GET /pessoas
   # GET /pessoas.json
   def index
-    @pessoas = Pessoa.all
+    if params[:search] 
+      #@soma =  Pessoa.search_errado(params[:search])
+      @pessoas = Pessoa.search_nome(params[:search]).paginate(:page => params[:page], :per_page => 6)
+    else 
+      @pessoas = Pessoa.paginate(:page => params[:page], :per_page => 6)
+    end
   end
 
   # GET /pessoas/1
