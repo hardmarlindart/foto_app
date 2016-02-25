@@ -15,7 +15,8 @@
 /log/*
 !/log/.keep
 /tmp
-/img
+/img/uploads/store/*
+/img/uploads/cache/*
 /config/database.yml
 /config/secrets.yml
 
