@@ -1,3 +1,4 @@
+<% if user_signed_in? %>
 <div class="col-lg-5 col-md-5 col-sm-7 col-xs-12">
 	<div class="well">
 		 <%= form_tag pessoas_path, :method => 'get', class: 'input-group'  do %>
@@ -8,3 +9,4 @@
   		<% end %>
 	</div>
 </div>
+<% end %>

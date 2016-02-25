@@ -1,3 +1,4 @@
+<% if user_signed_in? %>
 <div class="col-lg-3 col-md-4 col-sm-5">
 	<div class="well">
 		<div class="btn-group btn-group-cart">
@@ -8,9 +9,7 @@
 			</button>
 			<ul class="dropdown-menu cart-content" role="menu">
 				<li>
-					<a href="detail.html">
-						<b>Sair</b>
-					</a>
+					<%= link_to "Sair", destroy_user_session_path, :method => :delete %>
 				</li>
 				<li>
 					<a href="detail.html">
@@ -19,5 +18,8 @@
 				</li>
 			</ul>
 		</div>
+         <center><div><%= current_user.email %></div></center>
 	</div>
 </div>
+
+<% end %>

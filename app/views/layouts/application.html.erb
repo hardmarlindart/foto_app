@@ -21,23 +21,24 @@
 	            		<a href="index.html">
 	            			Agnesco <span>Alpha</span>
 	            		</a>
-	            		<div>Sistema de Fotografias.</div>
+	            		<div>Sistema de Fotografias.</div>   
 	            	</div>
 	            </div>
 	            <!-- End Logo -->
 
 				<!-- Search Form -->
-	            <%= render "busca" %>
+	           
+                <%= render "pessoas/busca" %>
 	            <!-- End Search Form -->
 
 	            <!--  acoes -->
-	            <%= render "acoes" %>
+	             <%= render "pessoas/acoes" %>
 	            <!-- end acoes  List -->
 	        </div>
 	    </div>
     </header>
 	<!-- Navigation -->
-    <%= render "menu" %>
+     <%= render "pessoas/menu" %>
     <!-- End Navigation -->
     <div class="container main-container">
         <div class="row">
@@ -66,7 +67,7 @@
 
 	</div>
 	<!-- rodape -->
-	<%= render "rodape" %>
+	 <%= render "pessoas/rodape" %>
 	<!-- fim rodape -->
 	
     <a href="#top" class="back-top text-center" onclick="$('body,html').animate({scrollTop:0},500); return false">
